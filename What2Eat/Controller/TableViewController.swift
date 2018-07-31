@@ -34,12 +34,14 @@ class TableViewController: UITableViewController {
             }
             self.save()
         }
+        let cancel = UIAlertAction(title: "取消", style: .cancel, handler: nil)
         alert.addTextField { (alertTextField) in
             alertTextField.placeholder = "一个菜名"
             alertTextField.keyboardType = .default
             textField = alertTextField
         }
         alert.addAction(action)
+        alert.addAction(cancel)
         present(alert, animated: true, completion: nil)
     }
     override func viewDidLoad() {
@@ -68,6 +70,7 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let alert = UIAlertController(title: "你要删除这个菜嘛？", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "确定", style: .destructive) { (action) in
             self.items.remove(at: indexPath.row)

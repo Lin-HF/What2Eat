@@ -25,13 +25,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EL-IC-Nxg">
-                                <rect key="frame" x="16" y="289" width="350" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="61"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2B-5i-OAh">
                                 <rect key="frame" x="106" y="475" width="164" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -42,20 +35,27 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNN-GX-6Sf">
-                                <rect key="frame" x="16" y="631" width="343" height="31"/>
+                                <rect key="frame" x="16" y="710" width="343" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGo-Og-SfX">
-                                <rect key="frame" x="233" y="86" width="142" height="30"/>
+                                <rect key="frame" x="243" y="86" width="123" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="菜不够，加点菜吧&gt;&gt;"/>
+                                <state key="normal" title="菜不够，加点菜吧"/>
                                 <connections>
-                                    <segue destination="26B-2D-m9U" kind="show" id="t8w-9L-UVJ"/>
+                                    <segue destination="26B-2D-m9U" kind="show" identifier="addItem" id="t8w-9L-UVJ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="31" translatesAutoresizingMaskIntoConstraints="NO" id="9EL-IC-Nxg">
+                                <rect key="frame" x="12" y="296" width="350" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="61"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -69,7 +69,7 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="117.48768472906404"/>
         </scene>
-        <!--Table View Controller-->
+        <!--这是菜单-->
         <scene sceneID="JI6-ES-Bi7">
             <objects>
                 <tableViewController id="VQi-zX-p6T" customClass="TableViewController" customModule="What2Eat" customModuleProvider="target" sceneMemberID="viewController">
@@ -93,8 +93,8 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Hpd-eT-Ny9">
-                        <barButtonItem key="leftBarButtonItem" title="&lt;&lt;加好了" id="UlG-hv-nNC">
+                    <navigationItem key="navigationItem" title="这是菜单" id="Hpd-eT-Ny9">
+                        <barButtonItem key="leftBarButtonItem" title="加好了" id="UlG-hv-nNC">
                             <connections>
                                 <action selector="disMiss:" destination="VQi-zX-p6T" id="7Pb-8x-lfQ"/>
                             </connections>
@@ -127,7 +127,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4T-a4-7Aa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868" y="116.74876847290641"/>
+            <point key="canvasLocation" x="969" y="117"/>
         </scene>
     </scenes>
 </document>

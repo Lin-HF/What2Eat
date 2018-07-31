@@ -48,7 +48,7 @@ class ViewController: UIViewController, ReloadDataDelegate {
         } else if count <= 10 {
             picktime.text = "你他妈有完没完了，你已经摇了\(count)次了！！"
         } else {
-            picktime.text = "你要我干嘛？摇着玩呢？"
+            picktime.text = "不要再摇了，你心里已经有答案了。。。"
         }
         let index = Int(arc4random_uniform(UInt32(foods.count)));
         food.text = foods[index]
@@ -61,6 +61,13 @@ class ViewController: UIViewController, ReloadDataDelegate {
         } else {
             foods = ["黄焖杏鲍菇", "香菇面", "麻辣烫", "麻辣香锅", "烤肉饭", "米饭套餐", "牛肉汤", "米线"]
             defaults.set(foods, forKey: "myItems")
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addItem" {
+            let destination = segue.destination as! UINavigationController
+            let aim = destination.topViewController as! TableViewController
+            aim.delegate = self
         }
     }
 
